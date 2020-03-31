@@ -1,0 +1,19 @@
+{
+  "name": "ajax-old-school-xmlhttprequest",
+  "version": "1.0.0",
+  "description": "Based on Bovacademy course. Goal - start with xhr and convert it to modern code.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ajax",
+    "xhr",
+    "promise"
+  ],
+  "author": "Barbara Stadnik",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
