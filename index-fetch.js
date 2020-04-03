@@ -1,5 +1,5 @@
 (function() {
-	`use strict`
+	'use strict'
 
 	const url = 'response.json',
 	options = {
@@ -27,5 +27,5 @@
 	})
 	.then(data => console.log('success', data))
 	.catch(error => console.log('error', error));
-	
+
 })();
