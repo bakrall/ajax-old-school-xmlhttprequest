@@ -12,3 +12,11 @@ app.post('/signin', (request, response) => {
 		status: 'success'
 	});
 });
+
+app.post('/upload', (request, response) => {
+	const data = request.body;
+
+	response.json({
+		status: 'success'
+	});
+});
