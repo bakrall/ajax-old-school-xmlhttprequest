@@ -9,12 +9,11 @@
 			files = document.getElementById('fileToUpload').files,
 			progressBar = document.getElementById('uploadProgress');
 
-		//do not run function when no file is chosen
-		if (!files.length) {
-			event.preventDefault();
-			return;
-		}
+		event.preventDefault();
 
+		//do not run function when no file is chosen
+		if (!files.length) return;
+		
 		for (let i=0; i<files.length; i++) {
 			formData.append('file', files[i], files[i].name);
 		}
@@ -27,8 +26,6 @@
 
 		xhr.open('POST', '/upload');
 		xhr.send(formData);
-
-		event.preventDefault();
 	}
 
 	form.addEventListener('submit', uploadFile);
