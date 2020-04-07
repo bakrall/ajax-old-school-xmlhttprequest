@@ -19,11 +19,11 @@
 
         <form id="upload" enctype="multipart/form-data">
             <label for="fileToUpload">Choose a file to upload</label>
-            <input type="file" id="fileToUpload" />
+            <input type="file" id="fileToUpload" multiple />
             <progress id="uploadProgress" value="0" max="100"></progress>
             <button type="submit">Upload</button>
         </form>
 
-        <script src="js/xhr/file-upload.js"></script>
+        <script src="js/fetch/file-upload-fetch.js"></script>
     </body>
 </html>

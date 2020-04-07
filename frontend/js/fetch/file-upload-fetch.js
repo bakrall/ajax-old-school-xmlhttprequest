@@ -15,7 +15,9 @@
 			return;
 		}
 
-		formData.append('file', files[0]);
+		for (let i=0; i<files.length; i++) {
+			formData.append('file', files[i]);
+		}
 
 		fetch('/upload', {
 			method: 'POST',
