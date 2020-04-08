@@ -1,5 +1,5 @@
 (function() {
-	'ust strict'
+	'ust strict';
 
 	const form = document.getElementById('login');
 

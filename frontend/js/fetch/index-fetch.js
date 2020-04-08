@@ -1,5 +1,5 @@
 (function() {
-	'use strict'
+	'use strict';
 
 	const url = 'response.json',
 	options = {
