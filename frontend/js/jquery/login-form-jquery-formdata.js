@@ -11,16 +11,18 @@
 			formData.append(input.id, input.value);
 		});
 
-		$.ajax({
+		const jqxhr = $.ajax({
 			type: 'POST',
 			url: '/signin',
 			data: formData,
 			processData: false, //stop jQuery from trying to add the FormData object to the query string of the URL
 			success: function(response) {
 				console.log(response);
-				$confirmationMessage.text(response.status)
 			}
-		});
+		})
+		.done(function() {
+			$confirmationMessage.text(JSON.parse(jqxhr.responseText).status);
+		})
 
 		event.preventDefault();
 	})
