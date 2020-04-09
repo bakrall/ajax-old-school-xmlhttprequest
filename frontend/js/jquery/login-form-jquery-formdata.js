@@ -1,6 +1,8 @@
 (function($){
 	'use strict';
 
+	const $confirmationMessage = $('.confirmation-message');
+
 	$('#login').on('submit', function(event) {
 		const $loginInputs = $(this).find('input'),
 			formData = new FormData();
@@ -16,6 +18,7 @@
 			processData: false, //stop jQuery from trying to add the FormData object to the query string of the URL
 			success: function(response) {
 				console.log(response);
+				$confirmationMessage.text(response.status)
 			}
 		});
 
